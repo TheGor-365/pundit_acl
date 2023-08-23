@@ -18,9 +18,9 @@ gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem "pundit", "~> 2.3"
 gem "simple_form"
+gem "bcrypt", "~> 3.1.7"
 
 # gem "kredis"
-# gem "bcrypt", "~> 3.1.7"
 # gem "sassc-rails"
 
 group :development, :test do
