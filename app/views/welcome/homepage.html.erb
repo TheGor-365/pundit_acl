@@ -3,6 +3,10 @@
 </h1>
 
 <div class="text-center my-5">
-  <%= link_to "Sign up", new_user_path, class: 'btn btn-lg btn-outline-success px-5' %>
-  <%= link_to "Sign in", new_session_path, class: 'btn btn-lg btn-outline-success px-5' %>
+  <% if current_user %>
+    <%= link_to "Sign out", destroy_sessions_path, method: :delete, class: 'btn btn-lg btn-outline-danger px-5' %>
+  <% else %>
+    <%= link_to "Sign in", new_session_path, class: 'btn btn-lg btn-outline-success px-5' %>
+    <%= link_to "Sign up", new_user_path, class: 'btn btn-lg btn-outline-success px-5' %>
+  <% end %>
 </div>
