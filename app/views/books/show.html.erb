@@ -1,0 +1,11 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+
+<%= render @book %>
+
+<div class="button-group">
+  <%= link_to "Edit this book", edit_book_path(@book), class: 'btn btn-sm btn-outline-dark' %>
+  <%= link_to "Back to books", books_path, class: 'btn btn-sm btn-outline-dark' %>
+  <%= button_to "Destroy this book", @book, method: :delete, class: 'btn btn-sm btn-outline-dark' %>
+</div>

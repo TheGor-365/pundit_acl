@@ -1,0 +1,16 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+
+<h1 class="text-muted text-center">
+  Books
+</h1>
+
+<% @books.each do |book| %>
+  <div class="card shadow my-5 p-5">  
+    <%= render book %>
+    <p><%= link_to "Show this book", book, class: 'btn btn-sm btn-outline-dark mt-3' %></p>
+  </div>
+<% end %>
+
+<%= link_to "New book", new_book_path, class: 'btn btn-sm btn-outline-dark mt-3' %>
